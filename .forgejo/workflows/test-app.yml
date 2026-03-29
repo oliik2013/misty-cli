@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y chafa
+          sudo apt install -y curl grep findutils chafa
 
       - name: Run app
         run: |

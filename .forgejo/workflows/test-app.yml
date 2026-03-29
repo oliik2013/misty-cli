@@ -18,4 +18,4 @@ jobs:
 
       - name: Run app
         run: |
-          ./misty-cli.sh
+          /bin/bash ./misty-cli.sh

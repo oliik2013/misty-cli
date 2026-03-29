@@ -1,0 +1,21 @@
+name: Test Misty CLI App
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    stepps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y chafa
+
+      - name: Run app
+        run: |
+          ./misty-cli.sh

@@ -18,5 +18,9 @@ jobs:
       - name: Run misty-cli
         run: |
           chmod +x misty-cli.sh
-          set -x
-          ./misty-cli.sh 2>&1 | head -50 || echo "Script exited with code $?"
+          # Debug: check network & dependencies
+          curl -s --max-time 10 "https://starnumber.vercel.app/misty?web=1" | head -5
+          which chafa
+          head -1 /dev/urandom | chafa --help 2>&1 | head -3
+          # Run script
+          ./misty-cli.sh 2>&1 | head -5 || echo "Script failed with: $?"

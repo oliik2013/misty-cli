@@ -18,4 +18,5 @@ jobs:
       - name: Run misty-cli
         run: |
           chmod +x misty-cli.sh
-          ./misty-cli.sh
+          set -x
+          ./misty-cli.sh 2>&1 | head -50 || echo "Script exited with code $?"

@@ -6,12 +6,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    container: archlinux:latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Install dependencies
         run: |
-          pacman -Sy --noconfirm curl grep findutils chafa
+          sudo apt-get update && sudo apt-get install -y curl grep findutils chafa
 
       - name: Checkout
         uses: actions/checkout@v4

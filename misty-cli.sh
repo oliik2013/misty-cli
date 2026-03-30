@@ -6,4 +6,14 @@ if [ -z "$IMG_URL" ]; then
   echo "ERROR: could not fetch image URL" >&2
   exit 1
 fi
-curl -s -f "$IMG_URL" | chafa
+echo "Downloading: $IMG_URL"
+TMPFILE=$(mktemp)
+curl -s -f "$IMG_URL" -o "$TMPFILE"
+if [ ! -s "$TMPFILE" ]; then
+  echo "ERROR: downloaded file is empty" >&2
+  rm -f "$TMPFILE"
+  exit 1
+fi
+file "$TMPFILE"
+chafa "$TMPFILE"
+rm -f "$TMPFILE"

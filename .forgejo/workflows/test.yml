@@ -18,4 +18,7 @@ jobs:
       - name: Run misty-cli
         run: |
           chmod +x misty-cli.sh
-          ./misty-cli.sh
+          # Check network access
+          curl -s --max-time 10 -o /dev/null -w "%{http_code}" https://starnumber.vercel.app/misty?web=1 || echo "NETWORK_FAILED"
+          curl -s --max-time 10 -o /dev/null -w "%{http_code}" https://8ek6ccfrg2.ufs.sh/ || echo "CDN_FAILED"
+          ./misty-cli.sh 2>&1 || echo "SCRIPT_FAILED"

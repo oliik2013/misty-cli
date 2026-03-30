@@ -1,0 +1,22 @@
+name: Test misty-cli
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Sy --noconfirm curl grep findutils chafa
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run misty-cli
+        run: |
+          chmod +x misty-cli.sh
+          ./misty-cli.sh

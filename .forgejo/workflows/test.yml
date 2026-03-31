@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y curl grep findutils chafa
+          sudo apt-get update && sudo apt-get install -y bash curl grep findutils chafa
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,4 +18,4 @@ jobs:
       - name: Run misty-cli
         run: |
           chmod +x misty-cli.sh
-          ./misty-cli.sh
+          bash ./misty-cli.sh

@@ -18,4 +18,4 @@ jobs:
       - name: Run misty-cli
         run: |
           chmod +x misty-cli.sh
-          bash ./misty-cli.sh
+          bash ./misty-cli.sh --size=40x

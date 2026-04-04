@@ -22,7 +22,7 @@ jobs:
       - name: Setup python3
         uses: actions/setup-python@v6
 
-      - name: Test extra: misty-loop.py
+      - name: Test extra misty-loop.py
         run: |
           timeout 25s python3 extras/misty-loop.py
 

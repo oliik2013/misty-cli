@@ -7,3 +7,8 @@ Required dependencies:
 
 Install:
 ```sudo install -m 755 misty-cli.sh /usr/bin/misty-cli```
+
+## Extras
+
+Misty loop
+```python3 extras/misty-loop.py

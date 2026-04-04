@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y bash curl grep findutils chafa timeout
+          sudo apt-get update && sudo apt-get install -y bash curl grep findutils chafa
 
       - name: Checkout
         uses: actions/checkout@v4

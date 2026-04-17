@@ -11,4 +11,4 @@ Install:
 ## Extras
 
 Misty loop
-```python3 extras/misty-loop.py
+```python3 extras/misty-loop.py```

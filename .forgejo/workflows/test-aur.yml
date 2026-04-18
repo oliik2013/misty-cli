@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Update packages
         run: |
-          sudo pacman -Syu --noconfirm
+          pacman -Syu --noconfirm
 
       - name: Install misty-cli
         run: |

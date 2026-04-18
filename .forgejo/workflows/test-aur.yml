@@ -8,9 +8,9 @@ jobs:
   test:
     runs-on: archlinux-latest
     steps:
-      - name: Update packages
+      - name: Install dependencies
         run: |
-          pacman -Syu --noconfirm
+          pacman -Syu --noconfirm git
 
       - name: Install misty-cli
         run: |

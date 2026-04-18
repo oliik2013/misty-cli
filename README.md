@@ -2,6 +2,8 @@
 
 ## Simple app to fetch and display misty photos
 
+![AUR Version](https://img.shields.io/aur/version/misty-cli "AUR Version")
+
 Required dependencies:
 ```bash curl chafa```
 

@@ -18,7 +18,7 @@ AUR:
 
 ![AUR Name](https://img.shields.io/badge/aur-misty--cli-blue?logo=archlinux "AUR Name")
 
-Package name: ```misty-cli``
+Package name: ```misty-cli```
 
 ## Extras
 

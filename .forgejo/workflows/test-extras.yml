@@ -24,13 +24,5 @@ jobs:
 
       - name: Test extra misty-loop.py
         run: |
-          timeout 25s python3 extras/misty-loop.py
-          code=$?
-
-          if [ "$code" -eq 124 ]; then
-            echo "Timeout occurred (124), treating as success"
-            exit 0
-          fi
-
-          exit $code
+          python3 extras/misty-loop.py --istesting True
 

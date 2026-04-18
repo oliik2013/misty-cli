@@ -1,0 +1,23 @@
+name: Test misty-cli from AUR
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: archlinux-latest
+    steps:
+      - name: Update packages
+        run: |
+          sudo pacman -Syu --noconfirm
+
+      - name: Install misty-cli
+        run: |
+          git clone https://aur.archlinux.org/misty-cli.git
+          cd misty-cli
+          makepkg -si --noconfirm
+
+      - name: Run misty-cli
+        run: |
+          misty-cli

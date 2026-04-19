@@ -1,4 +1,4 @@
-name: Test misty-cli
+name: Test extras
 
 on:
   push:

@@ -4,12 +4,12 @@
 
 ![AUR Version](https://img.shields.io/aur/version/misty-cli?logo=archlinux "AUR Version") ![AUR Popularity](https://img.shields.io/aur/popularity/misty-cli?logo=archlinux "AUR Popularity")
 
-### Required dependencies:
+## Required dependencies:
 ```bash curl chafa```
 
-### Install:
+## Install:
 
-# Any Linux
+### Any Linux
 
 From source:
 
@@ -17,7 +17,7 @@ System wide: ```sudo install -m 755 ./misty-cli.sh /usr/bin/misty-cli```
 
 User only: ```install -m 755 ./misty-cli.sh ~/.local/bin/misty-cli```
 
-# Arch Linux
+### Arch Linux
 
 AUR:
 
@@ -25,7 +25,7 @@ AUR:
 
 Package name: ```misty-cli```
 
-# Windows
+### Windows
 
 Use [WSL](https://learn.microsoft.com/en-us/windows/wsl/) with the Any Linux install method.
 
